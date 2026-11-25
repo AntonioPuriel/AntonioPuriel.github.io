@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Antonio Puriel Hernández · A microbiologist who chose bioinformatics</title>
+<meta name="description" content="Antonio Puriel Hernández, PhD in Environmental Microbiology. Genome-resolved metagenomics, Nextflow and HPC: mag-pipeline, magreport and a 48-metagenome case study.">
+<meta name="author" content="Antonio Puriel Hernández">
+<link rel="canonical" href="https://antoniopuriel.github.io/">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://antoniopuriel.github.io/">
+<meta property="og:title" content="Antonio Puriel Hernández · A microbiologist who chose bioinformatics">
+<meta property="og:description" content="Genome-resolved metagenomics, Nextflow and HPC. Open tools with DOIs and a 48-metagenome case study: 281 species-level MAGs from public oil-spill data.">
+<meta property="og:image" content="https://antoniopuriel.github.io/assets/img/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Circular tree of 280 bacterial metagenome-assembled genomes">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+<meta name="theme-color" content="#f3f5ef">
+<script>
+  (function () {
+    var t = null;
+    try { t = new URLSearchParams(location.search).get('theme') || localStorage.getItem('theme'); } catch (e) {}
+    document.documentElement.setAttribute('data-theme', t === 'dark' ? 'dark' : 'light');
+  })();
+</script>
+<link rel="preload" href="assets/fonts/literata-latin-500-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/ibm-plex-sans-latin-400-normal.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="wrap">
+    <a class="mark" href="#top">A. Puriel Hernández</a>
+    <nav aria-label="Sections">
+      <a href="#about">About</a><a href="#tools">Tools</a><a href="#case">Case study</a>
+      <a href="#research">Research</a><a href="#outreach">Outreach</a><a href="#contact">Contact</a>
+    </nav>
+    <div class="acts">
+      <a class="btn cv" href="assets/cv_PURIEL_Antonio.pdf">CV (PDF)</a>
+      <button class="btn" id="theme-toggle" type="button" aria-label="Dark mode" aria-pressed="false">Dark</button>
+    </div>
+  </div>
+</header>
+
+<div class="hero" id="top">
+  <div class="wrap">
+    <div>
+      <p class="who">ANTONIO PURIEL HERNÁNDEZ, PhD</p>
+      <h1>A microbiologist who chose bioinformatics.</h1>
+      <p class="lede">Genome-resolved metagenomics, Nextflow and HPC. PhD in Environmental Microbiology, Université de Pau et des Pays de l'Adour (2025).</p>
+      <p class="avail">Open to postdoc and research engineer positions in bioinformatics. Available from January 2027.</p>
+      <div class="nums">
+        <div><b>281</b><span>species-level MAGs from a public oil-spill dataset</span></div>
+        <div><b>6.5×</b><span>the 43 MAGs reported in the original study, at the same completeness and contamination thresholds</span></div>
+        <div><b>~300&nbsp;GB</b><span>of compressed reads: 48 metagenomes on a 1&nbsp;TB storage quota</span></div>
+      </div>
+    </div>
+    <figure class="treebox">
+      <div class="disc"><img src="assets/img/mh_tree_hero.webp" width="800" height="783" alt="Circular phylogenomic tree of the 280 bacterial genomes recovered in the Marine Honour case study, with coloured annotation rings"></div>
+      <figcaption>The 280 bacterial MAGs of the case study. <a href="#case">How they were made ↓</a></figcaption>
+    </figure>
+  </div>
+</div>
+
+<main id="main">
+
+  <section id="about" class="wrap" aria-labelledby="h-about">
+    <div class="shead"><span class="k">01 / about</span><h2 id="h-about">Two fields, one line of work</h2></div>
+    <div class="reading">
+      <p>I trained as a microbiologist. My PhD (IPREM, Pau, 2021–2025) followed bacteria and archaea in hydrocarbon-contaminated coastal sediments exposed to oxic/anoxic oscillations, from microcosm experiments and DNA extraction to shotgun metagenomes. The questions were biological; answering them took bioinformatics, which became the core of my work during the PhD and since. I now build the tools I use and run them on public datasets.</p>
+    </div>
+    <div class="bridge">
+      <div class="side"><h3>Microbiology</h3><ul>
+        <li>Hydrocarbon-degrading communities, archaea, coastal sediments</li>
+        <li>Microcosm experiments under controlled oxygenation</li>
+        <li>DNA extraction from sediment; 16S/18S metabarcoding (SAMBA)</li></ul></div>
+      <div class="span" aria-hidden="true">→ question → data → tool →</div>
+      <div class="side"><h3>Bioinformatics</h3><ul>
+        <li>Shotgun metagenomics and genome recovery (MAGs), MIMAG standards</li>
+        <li>Nextflow DSL2, SLURM, Docker/Singularity, GitHub Actions</li>
+        <li>R (package development, multivariate statistics, DESeq2), Python, Bash</li>
+        <li>scRNA-seq on public data (Seurat, Harmony, inferCNV)</li></ul></div>
+    </div>
+    <p class="label">Path</p>
+    <ul class="path">
+      <li><span class="yr">2026</span><span>Independent research: mag-pipeline, magreport, hcc-singlecell; global MAG catalogue with Prof. Robert Duran</span></li>
+      <li><span class="yr">2021–2025</span><span>PhD in Environmental Microbiology, IPREM UMR CNRS 5254, UPPA, Pau, France. Visiting researcher, E2ME Lab, Pontificia Universidad Católica de Chile (May–June 2023)</span></li>
+      <li><span class="yr">2017–2019</span><span>MSc Environmental Engineering, Tecnológico Nacional de México</span></li>
+      <li><span class="yr">2010–2015</span><span>BSc Chemical Engineering, Tecnológico Nacional de México</span></li>
+    </ul>
+    <p class="note" style="margin-top:1rem">Spanish (native) · English (C1) · French (B2) · Based in Pau, France</p>
+  </section>
+
+  <section id="tools" class="wrap" aria-labelledby="h-tools">
+    <div class="shead"><span class="k">02 / tools</span><h2 id="h-tools">From reads to report</h2><p>Two tools that work as a chain, and one project that applies the same habits to single-cell data.</p></div>
+    <div class="rail">
+      <article class="tool">
+        <div><h3>mag-pipeline</h3><div class="what">Nextflow DSL2 · SLURM</div></div>
+        <div>
+          <p>From raw paired-end reads to quality-checked, classified and annotated MAGs: MEGAHIT, CONCOCT and MetaBAT2 refined with DAS Tool, CheckM2, GUNC, galah (95&nbsp;% ANI), GTDB-Tk, MIMAG rRNA/tRNA, eggNOG-mapper and hydrocarbon-degradation genes (CANT-HYD, HADEG). A second mode (<code>--workflow contigs</code>) skips binning: a non-redundant gene catalogue of all filtered contigs, with function, contig taxonomy (CAT) and per-sample abundance. Optionally, SingleM profiles the reads directly. Docker, Singularity and SLURM profiles, stub-run CI, run provenance.</p>
+          <div class="links"><a href="https://github.com/AntonioPuriel/mag-pipeline">GitHub</a><a class="doi" href="https://doi.org/10.5281/zenodo.23920189">DOI (all versions): 10.5281/zenodo.23920189</a></div>
+        </div>
+      </article>
+      <article class="tool">
+        <div><h3>magreport</h3><div class="what">R package</div></div>
+        <div>
+          <p>Reads mag-pipeline outputs into tidy tables and turns them into figures (quality, taxonomy, abundance over time, hydrocarbon genes, a circular MAG tree) and an HTML report. testthat, R CMD check on CI, pkgdown site.</p>
+          <div class="links"><a href="https://github.com/AntonioPuriel/magreport">GitHub</a><a href="https://antoniopuriel.github.io/magreport/">Website</a><a href="https://antoniopuriel.github.io/magreport/articles/marine-honour-tree.html">Interactive tree</a><a class="doi" href="https://doi.org/10.5281/zenodo.23947036">DOI (all versions): 10.5281/zenodo.23947036</a></div>
+        </div>
+      </article>
+      <article class="tool">
+        <div><h3>hcc-singlecell</h3><div class="what">scRNA-seq · R/targets on SLURM</div></div>
+        <div>
+          <p>Hepatocellular carcinoma from public data (GSE149614; <a href="https://doi.org/10.1038/s41467-022-32283-3">Lu et al. 2022</a>): ~68,000 cells from 10 patients after QC. Harmony integration, per-patient inferCNV, myeloid states, pseudobulk DESeq2, LIANA, slingshot. As a check of the pipeline, tumour-associated macrophages (SPP1<sup>+</sup>, C1Q<sup>+</sup>APOE<sup>+</sup>) are almost confined to tumour sites, consistent with published HCC atlases (<a href="https://doi.org/10.1038/s41467-022-32283-3">Lu et al. 2022</a>; <a href="https://doi.org/10.1016/j.jhep.2023.01.011">Liu et al. 2023</a>). CytoTRACE2 did not support a stem-like tumour state under a criterion fixed in advance, so these cells are reported as progenitor-like.</p>
+          <div class="links"><a href="https://antoniopuriel.github.io/hcc-singlecell/">Report</a><a href="https://github.com/AntonioPuriel/hcc-singlecell">GitHub</a></div>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section id="case" class="wrap" aria-labelledby="h-case">
+    <div class="shead"><span class="k">03 / case study</span><h2 id="h-case">Marine Honour oil spill, Singapore (2024)</h2>
+      <p>A test of mag-pipeline on public data: the 48 intertidal sediment metagenomes of <a href="https://doi.org/10.1016/j.ese.2025.100623">George et al. (2025)</a>, BioProject <a href="https://www.ncbi.nlm.nih.gov/bioproject/PRJNA1263040">PRJNA1263040</a>, a study centred on the community and hydrocarbon-gene response to the spill. Reprocessing the same reads gave a larger genome catalogue at the same completeness and contamination thresholds (both dereplicated at 95&nbsp;% ANI); here, chimeric bins were also removed with GUNC. It is a reprocessing, not a new biological finding.</p></div>
+
+    <p class="note"><b>Design.</b> 8 time points (2 to 185 days after the oil arrived) × 2 impact levels × 3 replicates; ~300&nbsp;GB of compressed reads.</p>
+
+    <div class="diagram">
+      <ol class="stages" aria-label="Processing stages and counts">
+        <li class="stage"><div class="node" aria-hidden="true">01</div><div class="count">48</div><div class="unit">samples, ~300&nbsp;GB compressed</div><div class="tool-n">fastp</div></li>
+        <li class="stage"><div class="node" aria-hidden="true">02</div><div class="count">8</div><div class="unit">co-assemblies</div><div class="tool-n">MEGAHIT</div></li>
+        <li class="stage"><div class="node" aria-hidden="true">03</div><div class="count">384</div><div class="unit">read mappings (every sample to every co-assembly)</div><div class="tool-n">Bowtie2 · samtools</div></li>
+        <li class="stage"><div class="node" aria-hidden="true">04</div><div class="count">1,161</div><div class="unit">refined bins</div><div class="tool-n">CONCOCT · MetaBAT2 · DAS Tool</div></li>
+        <li class="stage"><div class="node" aria-hidden="true">05</div><div class="count">820</div><div class="unit">genomes pass quality and chimera checks</div><div class="tool-n">CheckM2 · GUNC</div></li>
+        <li class="stage"><div class="node" aria-hidden="true">06</div><div class="count">281</div><div class="unit">species clusters at 95&nbsp;% ANI</div><div class="tool-n">galah</div></li>
+        <li class="stage final"><div class="node" aria-hidden="true">07</div><div class="count">281</div><div class="unit">representatives classified; hydrocarbon genes annotated</div><div class="tool-n">GTDB-Tk · CANT-HYD · HADEG (eggNOG in progress)</div></li>
+      </ol>
+      <div class="funnel" role="img" aria-label="Of 1,161 refined bins, 341 were removed (157 chimeric, 184 low quality); the 820 remaining genomes group into 281 species clusters at 95 % ANI.">
+        <div class="fbar"><span class="lab">refined bins</span><div class="track"><div class="fill" style="width:100%">1,161</div></div></div>
+        <div class="fbar"><span class="lab">removed</span><div class="track"><div class="fill cut" style="width:29.4%">−341</div><span class="why">157 chimeric (GUNC), 184 low quality</span></div></div>
+        <div class="fbar"><span class="lab">kept</span><div class="track"><div class="fill" style="width:70.6%">820</div></div></div>
+        <div class="fbar"><span class="lab">dereplicated</span><div class="track"><div class="fill groups" style="width:70.6%"></div><span class="gl">281 species clusters (820 genomes, 95&nbsp;% ANI)</span></div></div>
+      </div>
+      <p class="fnote">Dereplication groups genomes; it does not discard them. Each cluster keeps one representative for the catalogue.</p>
+    </div>
+
+    <div class="facts">
+      <div><b>6.5×</b><span>281 species-level MAGs (≥&nbsp;50&nbsp;% complete, &lt;&nbsp;10&nbsp;% contamination) vs 43 in the original study, at the same thresholds</span></div>
+      <div><b>87&nbsp;%</b><span>244 without a species representative in GTDB r232; 75 without a genus</span></div>
+      <div><b>6 / 275</b><span>MIMAG high / medium quality; 280 bacteria, 1 archaeon</span></div>
+      <div><b>62</b><span>MAGs with hydrocarbon-degradation markers (CANT-HYD)</span></div>
+    </div>
+    <p class="note"><b>Constraints.</b> A shared SLURM cluster with a 1&nbsp;TB storage quota and a 5-day job limit: BAM files are not kept, assembler concurrency is capped, and GTDB-Tk and eggNOG-mapper run on a large-memory partition.</p>
+
+    <figure class="fig">
+      <div class="plate"><img src="assets/img/mh_tree.webp" width="1550" height="996" loading="lazy" alt="Circular tree of 280 bacterial MAGs. Branches are coloured by lineage, mostly Gammaproteobacteria, Alphaproteobacteria, Acidobacteriota, Bacteroidota and Actinomycetota. Rings show novelty against GTDB, MIMAG quality, four hydrocarbon-degradation processes, abundance ratio between high- and low-impact sites, and outer bars with the highest abundance of each MAG."></div>
+      <figcaption><b>Figure 1.</b> The 280 bacterial MAGs on a de novo tree (FastTree) built from the 120 GTDB-Tk bacterial marker genes and rooted on the Patescibacteriota, with rings for lineage, novelty against GTDB r232, MIMAG quality, four groups of hydrocarbon-degradation markers (CANT-HYD), the log2 ratio of mean abundance between high- and low-impact sites, and the highest relative abundance in any sample (square-root scale). Made with magreport (<code>plot_mag_tree()</code>). <a href="https://antoniopuriel.github.io/magreport/articles/marine-honour-tree.html">Explore the interactive version →</a></figcaption>
+    </figure>
+
+    <figure class="fig">
+      <div class="plate"><img src="assets/img/mh_timeline.webp" width="1500" height="900" loading="lazy" alt="Five line charts of relative abundance (%) against days after oil arrival (2 to 185), each with one line for the low-impact and one for the high-impact site, for the marker groups listed in the caption."></div>
+      <figcaption><b>Figure 2.</b> Abundance over time of the MAGs carrying CANT-HYD markers, grouped by degradation process as in the panels (any marker; aerobic alkanes; aerobic short-chain alkanes; aerobic aromatics and PAHs; anaerobic) at low- and high-impact sites. Abundance is each group's share of the summed depth of the 281 MAGs in a sample; mean ± SD of 3 replicates. Made with magreport (<code>plot_abundance_timeline()</code>).</figcaption>
+    </figure>
+  </section>
+
+  <section id="research" class="wrap" aria-labelledby="h-research">
+    <div class="shead"><span class="k">04 / research</span><h2 id="h-research">Thesis and manuscripts</h2><p>None of the manuscripts is published yet.</p></div>
+
+    <div class="thesis">
+      <p class="tag">PhD thesis · defended December 2025</p>
+      <h3>Microbial communities influenced by oxic/anoxic oscillations in hydrocarbon-contaminated coastal sediments</h3>
+      <p>Université de Pau et des Pays de l'Adour (IPREM). Supervisors: Prof. Robert Duran, Dr Cristiana Cravo-Laureau.</p>
+      <p class="result">Main result: oxic/anoxic oscillations reorganised the bacterial communities and favoured the coexistence of aerobic and anaerobic hydrocarbon-degradation pathways, while archaeal communities remained stable.</p>
+      <div class="links"><a href="https://hal.science/tel-05543123">HAL tel-05543123</a><a class="doi" href="https://doi.org/10.70675/ff5cbb0dzb666z4fecz9465z99e93102a6aa">doi:10.70675/ff5cbb0dzb666z4fecz9465z99e93102a6aa</a></div>
+    </div>
+
+    <p class="label">Manuscripts</p>
+    <ul class="pubs">
+      <li><span class="st">In revision</span><span>Puriel Hernández A., Duran R., Noel C., Terrisse F., Ramond J.-B., Cagnon C., Cravo-Laureau C. Stability of archaeal communities under oxic/anoxic oscillations in oil-polluted coastal sediments. <i>Scientific Reports</i>.</span></li>
+      <li><span class="st">Submitted</span><span>Puriel Hernández A., Duran R., Cravo-Laureau C. Microbial metagenomics of oil-polluted coastal sediments exposed to oxygenation fluctuation. <i>FEMS Microbiology Ecology</i>.</span></li>
+    </ul>
+
+    <p class="label">Ongoing project</p>
+    <ul class="pubs">
+      <li><span class="st neutral">2026</span><span>Global MAG catalogue of hydrocarbon-contaminated coastal sediments, with Prof. Robert Duran: public studies reprocessed from raw reads with mag-pipeline, genomes to be deposited at ENA. Pilot under way; manuscript in preparation.</span></li>
+    </ul>
+
+    <p class="label">Software</p>
+    <ul class="pubs">
+      <li><span class="st neutral">Zenodo</span><span>Puriel Hernández, A. (2026). <i>mag-pipeline: a Nextflow workflow for genome-resolved metagenomics</i> [Software]. Zenodo. <a class="doi" href="https://doi.org/10.5281/zenodo.23920189">https://doi.org/10.5281/zenodo.23920189</a></span></li>
+      <li><span class="st neutral">Zenodo</span><span>Puriel Hernández, A. (2026). <i>magreport: explore and report MAG recovery results</i> [Software]. Zenodo. <a class="doi" href="https://doi.org/10.5281/zenodo.23947036">https://doi.org/10.5281/zenodo.23947036</a></span></li>
+    </ul>
+
+    <p class="label">Conference</p>
+    <ul class="pubs">
+      <li><span class="st neutral">Poster · 2024</span><span>Puriel Hernández A., Cravo-Laureau C., Duran R. Archaeal community structure influenced by oxygenation oscillations in oil-polluted coastal sediments. ISME19, Cape Town, South Africa, August 2024.</span></li>
+    </ul>
+  </section>
+
+  <section class="wrap">
+    <div class="duo">
+      <div id="outreach">
+        <div class="shead"><span class="k">05 / outreach</span><h2>Ciencia para compartir</h2></div>
+        <p>A science-outreach site in Spanish, English and French: each topic is one short story per language, and every fact links to the study behind it.</p>
+        <div class="links"><a href="https://antoniopuriel.github.io/cienciaparacompartir/#en">Visit Ciencia para compartir →</a></div>
+      </div>
+      <div id="contact">
+        <div class="shead"><span class="k">06 / contact</span><h2>Contact</h2></div>
+        <p class="avail" style="margin-bottom:1.2rem">Open to postdoc and research engineer positions in bioinformatics. Available from January 2027.</p>
+        <dl class="c">
+          <dt>Email</dt><dd><a class="js-mail" href="#contact">apurielh [at] gmail [dot] com</a></dd>
+          <dt>GitHub</dt><dd><a href="https://github.com/AntonioPuriel">AntonioPuriel</a></dd>
+          <dt>ORCID</dt><dd><a href="https://orcid.org/0009-0000-7631-1102">0009-0000-7631-1102</a></dd>
+          <dt>LinkedIn</dt><dd><a href="https://www.linkedin.com/in/antonio-puriel-4b7992209/">antonio-puriel</a></dd>
+          <dt>CV</dt><dd><a href="assets/cv_PURIEL_Antonio.pdf">Download (PDF)</a></dd>
+        </dl>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer><div class="wrap">Antonio Puriel Hernández · Last updated November 2026 · Fonts: Literata, IBM Plex (<a href="assets/fonts/OFL-Literata.txt">SIL OFL 1.1</a>)</div></footer>
+
+<script src="assets/js/site.js"></script>
+</body>
+</html>
